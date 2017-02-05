@@ -25,21 +25,23 @@ def main():
         print("usage : python  main.py -i filename")
         sys.exit(2)
 
-    for opt,arg  in opts:
-        if opt in pars_line:
-            inputfile = arg
-            find = True
-    if not  find:
-        sys.exit(2)
+    csv_reader.csv_file_reader("file.csv")
+
+    # for opt,arg  in opts:
+    #     if opt in pars_line:
+    #         inputfile = arg
+    #         find = True
+    # if not  find:
+    #     sys.exit(2)
     #get extension
-    split_list = inputfile.split(".")
-    length = len(split_list)
-    ext = split_list[length-1]
-    if ext in extension:
-         fcn =  str(ext)
-         if fcn == "csv":
-             print("Avant append")
-             csv_reader.csv_file_reader(inputfile)
+    # split_list = inputfile.split(".")
+    # length = len(split_list)
+    # ext = split_list[length-1]
+    # if ext in extension:
+    #      fcn =  str(ext)
+    #      if fcn == "csv":
+    #          print("Avant append")
+    #          csv_reader.csv_file_reader(inputfile)
 
 if __name__ == '__main__':
     main()
