@@ -13,7 +13,7 @@ class Asynchrone():
         t.start()
 
     def save_handler(self, row):
-        self.solr.add(row)
+        self.solr.save_handler(row)
 
     def joiner(self):
         for t in self.threads:
