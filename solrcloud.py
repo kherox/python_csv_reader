@@ -1,11 +1,11 @@
-from solrcloudpy.connection import SolrConnection
+import solr
 #getting collection
 
 class SolrCloudClient():
     """docstring for SolrCloudClient."""
     def __init__(self):
-        self.conn = SolrConnetion()
-        self.node = self.conn['primary_node']
+         self.client = solr.Solr('http://127.0.0.1:8983/solr/gettingstarted')
+
 
     def save_handler(self, data):
-        self.node.add(data)
+        self.client.add(data)
