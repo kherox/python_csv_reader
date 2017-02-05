@@ -10,17 +10,13 @@ pars_line = {"-i","--ifile"}
 extension = {"csv","xml"}
 #Parsing Command line
 inputfile = "default"
-#test if parsing opts
-find = False
-#recuperation de l'extension du fichier
-#fcn = "csv"
-#create save_handler finction
-
 
 """Permet de parser le fichier csv et de le rendre comprenhensible"""
 
 def main():
     reader = csv_reader.CSVReader()
+    #test if parsing opts
+    find = False
     #recuperation de l'a line d'argument
     argv = sys.argv[1:]
     try:
