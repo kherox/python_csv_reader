@@ -44,3 +44,6 @@ def main():
          if fcn == "csv":
              print("Avant append")
              csv_reader.csv_file_reader(inputfile)
+
+if __name__ == '__main__':
+    main()
