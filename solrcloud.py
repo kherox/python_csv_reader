@@ -8,4 +8,9 @@ class SolrCloudClient():
          self.client = solr.Solr('http://127.0.0.1:8983/solr/gettingstarted')
 
     def save_handler(self, data):
-        self.client.add(data)
+        try:
+            self.client.add(data)
+        except Exception as e:
+            pass 
+        finally:
+            self.client.add(data)
