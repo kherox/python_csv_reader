@@ -25,7 +25,7 @@ def main():
         print("usage : python  main.py -i filename")
         sys.exit(2)
 
-    csv_reader.csv_file_reader("file.csv")
+    reader.csv_file_reader("file.csv")
 
     # for opt,arg  in opts:
     #     if opt in pars_line:
