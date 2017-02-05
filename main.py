@@ -14,6 +14,8 @@ inputfile = "default"
 """Permet de parser le fichier csv et de le rendre comprenhensible"""
 
 def main():
+    reload(sys)
+    sys.setdefaultencoding('utf8')
     reader = csv_reader.CSVReader()
     #test if parsing opts
     find = False
